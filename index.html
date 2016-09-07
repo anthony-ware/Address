@@ -62,7 +62,7 @@
             </tr>
             
             <tr ng-repeat='contact in contacts'>
-              <td ng click='editing=!editing'>{{contact.name}}</td>
+              <td ng-show= 'editing' ng click='editing=!editing'>{{contact.name}}</td>
               <td>{{contact.number}}</td>
             </tr>
   
