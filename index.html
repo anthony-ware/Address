@@ -61,8 +61,8 @@
               <th>Phone Number</th>
             </tr>
             
-            <tr ng-repeat='contact in contacts' ng-click= 'expand= !expand'>
-              <td>{{contact.name}}</td>
+            <tr ng-repeat='contact in contacts'>
+              <td ng click='editing=!editing'>{{contact.name}}</td>
               <td>{{contact.number}}</td>
             </tr>
   
