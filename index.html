@@ -61,13 +61,10 @@
               <th>Phone Number</th>
             </tr>
             
-            <tr ng-repeat='contact in contacts' ng-model='contact'>
+            <tr ng-repeat='contact in contacts' ng-click= 'expand= !expand'>
               <td>{{contact.name}}</td>
               <td>{{contact.number}}</td>
             </tr>
-
-           <!--  <td ng-hide="expand">{{contact.location}}</td>
-           -->
   
 
           </table>
