@@ -8,50 +8,20 @@
 
     <title>Address Book</title>
 
+     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src='js/main.js'></script>
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src=''></script>
+   
 
-
-    <script>
-     const app= angular.module('addressBook',[]);
-      app.controller('addressBookCtrl', function($scope) {
-        $scope.contacts = [
-        {'name': 'Anthony Ware',
-         'number': '5084043142',
-         'details': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nisi quis mi tincidunt luctus ut quis nunc. Nam non risus tincidunt risus sodales condimentum. Morbi sed gravida elit. Nunc a turpis vestibulum elit.',
-         'location':'Boston'}];
-
-         $scope.addContact = function(contact){
-          $scope.contacts.push(angular.copy(contact));
-          delete contact.name && delete contact.number;
-          delete contact.location;
-
-          
-         };
-
-         // $scope.expand = function(moreInfo){
-          
-         // };
-
-
-      });
-
-     
-      // When the user clicks on the entry, more data is shown.
-       // Create a module for the city and state that the person live in. 
-       //possibly show a picture of the person.
-
-
-    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,7 +29,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body ng-app='addressBook'>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -79,7 +48,6 @@
     </nav>
 
     <div class="container" ng-controller= "addressBookCtrl" >
-
       <div class="starter-template">
         <h1>Address Book</h1>
         <div class="panel panel-default">
@@ -93,17 +61,14 @@
               <th>Phone Number</th>
             </tr>
             
-            <tr ng-repeat='contact in contacts' ng-click=expand(moreInfo)>
+            <tr ng-repeat='contact in contacts' ng-model='contact'>
               <td>{{contact.name}}</td>
               <td>{{contact.number}}</td>
             </tr>
 
            <!--  <td ng-hide="expand">{{contact.location}}</td>
            -->
-              
-
-         
-            
+  
 
           </table>
 
