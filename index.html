@@ -52,7 +52,7 @@
         <h1>Address Book</h1>
         <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading">Phonebook</div>
+          <div class="panel-heading">Contacts</div>
 
           <!-- Table -->
           <table class="table">
@@ -61,14 +61,12 @@
               <th>Phone Number</th>
             </tr>
             
-            <tr ng-repeat='contact in contacts'>
+            <tr ng-repeat='contact in contacts' ng hide='expand'>
+              <td class= 'expand' ng-show='expand'><img src="http://dummyimage.com/100/000/fff"></td>
               <td>{{contact.name}}</td>
               <td>{{contact.number}}</td>
               <td><a href="" ng-click= 'expand=!expand'> + More Info</a></td>
-
             </tr>
-  
-
           </table>
 
           

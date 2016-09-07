@@ -2,7 +2,7 @@ const app= angular.module('addressBook',[]);
       app.controller('addressBookCtrl', function($scope) {
         $scope.contacts = [
         {'name': 'Anthony Ware',
-         'number': '5084043142',
+         'number': '508-404-3142',
          'details': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nisi quis mi tincidunt luctus ut quis nunc. Nam non risus tincidunt risus sodales condimentum. Morbi sed gravida elit. Nunc a turpis vestibulum elit.',
          'location':'Boston'}];
 
